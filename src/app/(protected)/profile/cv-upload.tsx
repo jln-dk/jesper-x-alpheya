@@ -21,11 +21,13 @@ export function CVUpload() {
       if (!file) return;
 
       setUploadedFile(file);
-      await uploadCv(file);
 
-      // Wait for at least 2 seconds and refresh the files
-      await Promise.all([wait(2000), refreshFiles()]);
-      setUploadedFile(null);
+      const result = await uploadCv(file);
+      if (result) {
+        // Wait for at least 2 seconds and refresh the files
+        await Promise.all([wait(2000), refreshFiles()]);
+        setUploadedFile(null);
+      }
     },
     [setUploadedFile, uploadCv, refreshFiles],
   );

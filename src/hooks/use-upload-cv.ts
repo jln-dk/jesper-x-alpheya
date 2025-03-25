@@ -8,42 +8,38 @@ export type CvUploadState = "idle" | "loading" | "error" | "success";
 
 export function useUploadCv() {
   const supabase = createClient();
-
   const [state, setState] = useState<CvUploadState>("idle");
 
-  const uploadCv = async (file: File) => {
+  const uploadCv = async (file: File): Promise<string | null> => {
     setState("loading");
 
     try {
-      setState("loading");
-
       const user = await supabase.auth.getUser();
       if (!user.data.user) {
-        setState("error");
-        return;
+        throw new Error("User not found");
       }
 
       const fileName = makeCvFileName(file);
-      // Upload to user's folder
-      const filePath = `${user.data.user.id}/${fileName}`;
+      const filePath = `${user.data.user.id}/${fileName}`; // Upload to user's folder
 
-      const { error, data } = await supabase.storage
+      const { data, error } = await supabase.storage
         .from("cvs")
         .upload(filePath, file);
 
       if (error) {
-        console.error("Error uploading file:", error);
-        setState("error");
-        return;
+        throw error;
       }
 
       if (data) {
         setState("success");
-        return data;
+        return data.path;
       }
+
+      return null;
     } catch (error) {
       setState("error");
       console.error("Error uploading file:", error);
+      return null;
     }
   };
 
