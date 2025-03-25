@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+/* Customize to Alpheya design */
+@theme {
+  --radius: 0.875rem; /* 14px */
+  --font-serif: "PT Serif", serif;
+  --font-sans: "Cabin", sans-serif;
+  --text-xl: 1.75rem;
+  --text-2xl: 2.125rem;
+  --color-background: #f5efe6;
+  --color-foreground: #4c4d4f;
+  --color-foreground-dark: #343537;
+  --color-dimmed: #a5a6a7;
+  --color-destructive: #e11d48;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+  }
+}
