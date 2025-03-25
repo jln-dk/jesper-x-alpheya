@@ -6,6 +6,8 @@ This is my submission for the Alpheya Next.js coding test. I've started on March
 
 Vercel deployment: https://jesper-x-alpheya.vercel.app
 
+Video recording: https://drive.google.com/file/d/1QjDL4XOzvcGWTMABo_SgT2nzXDxRTj3T/view?usp=sharing
+
 ## About
 
 The project is based on the Next.js `with-supabase` template: https://github.com/vercel/next.js/tree/canary/examples/with-supabase
