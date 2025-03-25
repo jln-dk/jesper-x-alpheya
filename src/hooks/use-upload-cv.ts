@@ -6,7 +6,7 @@ import { useState } from "react";
 
 export type CvUploadState = "idle" | "loading" | "error" | "success";
 
-export const useCvUpload = () => {
+export function useUploadCv() {
   const supabase = createClient();
 
   const [state, setState] = useState<CvUploadState>("idle");
@@ -51,4 +51,4 @@ export const useCvUpload = () => {
     state,
     uploadCv,
   };
-};
+}

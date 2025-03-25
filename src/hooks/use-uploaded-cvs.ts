@@ -10,7 +10,7 @@ type CvFile = {
   createdAt: string;
 };
 
-export const useUploadedCvs = () => {
+export function useUploadedCvs() {
   const supabase = createClient();
 
   const [cvs, setCvs] = useState<CvFile[]>([]);
@@ -60,4 +60,4 @@ export const useUploadedCvs = () => {
     state,
     refreshFiles: fetchFiles,
   };
-};
+}

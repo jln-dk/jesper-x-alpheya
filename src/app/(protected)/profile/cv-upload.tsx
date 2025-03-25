@@ -1,7 +1,7 @@
 "use client";
 
 import { FileItem } from "@/components/ui/file-item";
-import { useCvUpload } from "@/hooks/use-upload-cv";
+import { useUploadCv } from "@/hooks/use-upload-cv";
 import { useUploadedCvs } from "@/hooks/use-uploaded-cvs";
 import { wait } from "@/utils/wait";
 import { AnimatePresence, motion } from "framer-motion";
@@ -13,7 +13,7 @@ export function CVUpload() {
   const [uploadedFile, setUploadedFile] = useState<File | null>(null);
 
   const { state: filesState, cvs, refreshFiles } = useUploadedCvs();
-  const { state: uploadState, uploadCv } = useCvUpload();
+  const { state: uploadState, uploadCv } = useUploadCv();
 
   const onDrop = useCallback(
     async (acceptedFiles: File[]) => {

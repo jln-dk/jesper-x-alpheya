@@ -6,7 +6,7 @@ type FormCheckboxProps = WithClassName<{
   label: string;
 }>;
 
-export const FormCheckbox = ({ name, label }: FormCheckboxProps) => {
+export function FormCheckbox({ name, label }: FormCheckboxProps) {
   return (
     <div className="flex items-center gap-3">
       <div className="relative flex items-center">
@@ -23,4 +23,4 @@ export const FormCheckbox = ({ name, label }: FormCheckboxProps) => {
       </label>
     </div>
   );
-};
+}

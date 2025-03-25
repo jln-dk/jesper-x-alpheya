@@ -25,7 +25,7 @@ const DATA = [
   },
 ];
 
-export const Testimonials = () => {
+export function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
 
@@ -111,4 +111,4 @@ export const Testimonials = () => {
       </div>
     </div>
   );
-};
+}

@@ -21,21 +21,23 @@ const iconVariants = cva("", {
 
 type ArrowIconProps = IconProps & VariantProps<typeof iconVariants>;
 
-export const ArrowIcon = ({
+export function ArrowIcon({
   className,
   variant,
   dir,
   ...props
-}: ArrowIconProps) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="29"
-    height="29"
-    fill="none"
-    viewBox="0 0 29 29"
-    className={cn(iconVariants({ variant, dir }), className)}
-    {...props}
-  >
-    <path d="m4.21 14.18 8.157-8.157a.453.453 0 0 1 .641.641l-7.382 7.383h18.843a.453.453 0 0 1 0 .906H5.626l7.382 7.383a.453.453 0 1 1-.641.64L4.21 14.822a.453.453 0 0 1 0-.642Z" />
-  </svg>
-);
+}: ArrowIconProps) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="29"
+      height="29"
+      fill="none"
+      viewBox="0 0 29 29"
+      className={cn(iconVariants({ variant, dir }), className)}
+      {...props}
+    >
+      <path d="m4.21 14.18 8.157-8.157a.453.453 0 0 1 .641.641l-7.382 7.383h18.843a.453.453 0 0 1 0 .906H5.626l7.382 7.383a.453.453 0 1 1-.641.64L4.21 14.822a.453.453 0 0 1 0-.642Z" />
+    </svg>
+  );
+}

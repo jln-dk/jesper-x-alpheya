@@ -11,10 +11,10 @@ type UseFormProps<T extends ZodSchema> = {
   schema: T;
 };
 
-export const useFormValidator = <T extends ZodSchema>({
+export function useFormValidator<T extends ZodSchema>({
   serverAction,
   schema,
-}: UseFormProps<T>) => {
+}: UseFormProps<T>) {
   const [lastResult, action] = useActionState(serverAction, undefined);
 
   const [form, fields] = useForm({
@@ -27,4 +27,4 @@ export const useFormValidator = <T extends ZodSchema>({
   });
 
   return { form, fields, action };
-};
+}

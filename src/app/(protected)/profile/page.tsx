@@ -26,7 +26,9 @@ export default async function Page() {
             />
           )}
           <div className="flex min-w-0 flex-col">
-            <h1 className="font-serif text-lg md:text-xl">{name}</h1>
+            <h1 className="font-serif text-lg leading-none md:text-xl">
+              {name}
+            </h1>
             <div className="text-dimmed text-sm break-words md:text-base">
               {user.email}
             </div>

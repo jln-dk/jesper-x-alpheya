@@ -1,2 +1,3 @@
-export const wait = (ms: number) =>
-  new Promise((resolve) => setTimeout(resolve, ms));
+export function wait(ms: number) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}

@@ -9,14 +9,14 @@ type FormInputProps = WithClassName<{
   error?: string;
 }>;
 
-export const FormInput = ({
+export function FormInput({
   type,
   name,
   label,
   defaultValue,
   placeholder,
   error,
-}: FormInputProps) => {
+}: FormInputProps) {
   return (
     <div className="flex flex-1 flex-col">
       <label htmlFor={name} className="text-md text-foreground">
@@ -36,4 +36,4 @@ export const FormInput = ({
       )}
     </div>
   );
-};
+}
