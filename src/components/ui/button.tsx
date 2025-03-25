@@ -21,8 +21,5 @@ type ButtonProps = VariantProps<typeof buttonVariants> &
   ComponentProps<"button">;
 
 export const Button = ({ className, variant, ...props }: ButtonProps) => (
-  <button
-    className={cn(buttonVariants({ variant }), className)}
-    {...props}
-  ></button>
+  <button className={cn(buttonVariants({ variant }), className)} {...props} />
 );
