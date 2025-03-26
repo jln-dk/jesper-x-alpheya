@@ -1,6 +1,6 @@
 # jesper-x-alpheya
 
-This is my submission for the Alpheya Next.js coding test. I've started on March 23th and finished on March 25th, 2025.
+This is my submission for the Alpheya Next.js coding test. I've started on March 23th and finished on March 26th, 2025.
 
 ## Demo
 
@@ -21,6 +21,8 @@ Libraries I've used:
 - [Conform](https://conform.guide/) and [Zod](https://zod.dev/) for form handling and validation.
 - [Lucide](https://lucide.dev/) for icons.
 - [React Dropzone](https://react-dropzone.js.org/) for file upload.
+- [Prettier](https://prettier.io/) for code formatting and Tailwind classes sorting.
+- [Playwright](https://playwright.dev/) for e2e testing.
 
 ## Features
 
@@ -51,4 +53,16 @@ npm run dev
 npm install
 npm run build
 npm run start
+```
+
+### Formatting
+
+```bash
+npm run prettier
+```
+
+### Testing (e2e)
+
+```bash
+npm run test:e2e
 ```
