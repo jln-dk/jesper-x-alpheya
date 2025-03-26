@@ -31,9 +31,7 @@ export function FormInput({
         className="ring-offset-background placeholder:text-muted border-foreground text-md h-10 w-full border-b bg-white py-2 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
         defaultValue={defaultValue}
       />
-      {error && (
-        <div className="text-destructive mt-2 text-sm font-light">{error}</div>
-      )}
+      {error && <div className="text-destructive mt-2 text-sm">{error}</div>}
     </div>
   );
 }

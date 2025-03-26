@@ -13,13 +13,13 @@ export const metadata = {
 const ptSerif = PT_Serif({
   display: "swap",
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["400"],
 });
 
 const cabin = Cabin({
   display: "swap",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400"],
 });
 
 export default function RootLayout({

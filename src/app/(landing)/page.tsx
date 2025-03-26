@@ -24,7 +24,7 @@ export default function LandingPage() {
           <h2 className="text-foreground-dark font-serif text-[28px] md:text-[32px]">
             Upload Portfolio
           </h2>
-          <p className="text-foreground-dimmed font-sans">( PDF or DOCX )</p>
+          <p className="text-foreground-dimmed">( PDF or DOCX )</p>
         </Link>
       </div>
 

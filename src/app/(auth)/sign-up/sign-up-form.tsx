@@ -85,10 +85,7 @@ export function SignUpForm() {
 
         <p className="text text-dimmed text-center font-serif text-sm">
           Already have an account?{" "}
-          <Link
-            className="text-foreground font-medium underline"
-            href={routes.signIn}
-          >
+          <Link className="text-foreground underline" href={routes.signIn}>
             Log in
           </Link>
         </p>

@@ -71,10 +71,10 @@ export function Testimonials() {
               className="rounded-full"
               priority
             />
-            <div className="text-center font-serif text-[24px] font-normal text-black">
+            <div className="text-center font-serif text-[24px] text-black">
               {DATA[currentIndex].name}
             </div>
-            <p className="text-dimmed text-center font-sans text-lg">
+            <p className="text-dimmed text-center text-lg">
               {DATA[currentIndex].text}
             </p>
           </motion.div>

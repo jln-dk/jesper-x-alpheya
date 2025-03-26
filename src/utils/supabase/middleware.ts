@@ -1,3 +1,4 @@
+import { env } from "@/config/env";
 import { routes } from "@/config/routes";
 import { createServerClient } from "@supabase/ssr";
 import { type NextRequest, NextResponse } from "next/server";
@@ -14,8 +15,8 @@ export const updateSession = async (request: NextRequest) => {
     });
 
     const supabase = createServerClient(
-      process.env.NEXT_PUBLIC_SUPABASE_URL!,
-      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+      env.publicSupabaseUrl,
+      env.publicSupabaseAnonKey,
       {
         cookies: {
           getAll() {

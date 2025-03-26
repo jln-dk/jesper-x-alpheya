@@ -46,10 +46,7 @@ export function SignInForm() {
 
         <p className="text text-dimmed text-center font-serif text-sm">
           New user?{" "}
-          <Link
-            className="text-foreground font-medium underline"
-            href={routes.signUp}
-          >
+          <Link className="text-foreground underline" href={routes.signUp}>
             Sign up
           </Link>
         </p>
